@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Secure Page{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Secure Page</h1>
+    <p>Welcome, {{ user.username }}! Only authenticated users can see this page.</p>
+</div>
+{% endblock %}

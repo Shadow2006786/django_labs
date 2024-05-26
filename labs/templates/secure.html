@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Secure Page{% endblock %}
+
+{% block content %}
+<h2>Secure Page</h2>
+<p>Welcome, {{ user.username }} on the secure page.</p>
+<a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+<a href="{% url 'sensor_list' %}" class="btn btn-secondary">Back to Sensor List</a>
+{% endblock %}

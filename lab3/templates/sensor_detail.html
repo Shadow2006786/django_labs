@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Sensor Detail{% endblock %}
+
+{% block content %}
+<h1>{{ sensor.sensor_name }} Details</h1>
+<p>Location: {{ sensor.location }}</p>
+<p>Date: {{ sensor.measurement_date }}</p>
+<p>Time: {{ sensor.measurement_time }}</p>
+<p>Temperature: {{ sensor.temperature }}</p>
+<p>Model: {{ sensor.sensor_model }}</p>
+<p>Group: {{ sensor.sensor_group }}</p>
+<p>Pressure: {{ sensor.pressure }}</p>
+<p>CO2 Level: {{ sensor.co2_level }}</p>
+<a href="{% url 'sensor_list' %}" class="btn btn-primary">Back to Sensor List</a>
+{% endblock %}

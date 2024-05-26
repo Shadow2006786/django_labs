@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Sensor{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Add New Sensor</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Add Sensor</button>
+                            <a href="{% url 'sensor_list' %}" class="btn btn-secondary">Back to Sensor List</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

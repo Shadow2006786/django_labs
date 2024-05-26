@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Sensor List{% endblock %}
+
+{% block content %}
+<h1>List of Sensors</h1>
+<a href="{% url 'add_sensor' %}" class="btn btn-primary">Add New Sensor</a>
+<ul class="list-group mt-3">
+    {% for sensor in sensors %}
+        <li class="list-group-item">
+            <a href="{% url 'sensor_detail' sensor.id %}">{{ sensor.sensor_name }}</a> at {{ sensor.location }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
